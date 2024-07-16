@@ -20,13 +20,18 @@
 </style>
 </head>
 <body>
-
-<button onclick="document.getElementById('popup').style.display='block'">Open Pop-up</button>
+<div class="row">
+  <div class="col-lg-8 col-md-8 col-xs-12">
+<button onclick="document.getElementById('popup').style.display='block'">Contact Us</button>
 
 <div id="popup" class="popup">
   <span onclick="document.getElementById('popup').style.display='none'" class="close" title="Close Pop-up">&times;</span>
   <p>This is a pop-up content!</p>
 </div>
-
+  </div>
+  <div class="col-lg-4 col-md-4 col-xs-12">
+    <img src="image.jpg" alt="Description of Image">
+    </div>
+</div>
 </body>
 </html>
