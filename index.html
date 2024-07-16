@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GFG</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pop-up on Button Click</title>
+<style>
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 1;
+}
+</style>
 </head>
 <body>
-   <div>
-    <img src="image.jpg" alt="Image">
+
+<button onclick="document.getElementById('popup').style.display='block'">Open Pop-up</button>
+
+<div id="popup" class="popup">
+  <span onclick="document.getElementById('popup').style.display='none'" class="close" title="Close Pop-up">&times;</span>
+  <p>This is a pop-up content!</p>
 </div>
 
-<div>
-    <p>Text content goes here.</p>
-    <button onclick="document.getElementById('contactForm').style.display='block'">Contact Us</button>
-</div>
-
-<div id="contactForm" style="display: none;">
-    <h2>Contact Form</h2>
-    <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="4" required></textarea><br><br>
-        <input type="submit" value="Submit">
-    </form>
-</div>
 </body>
 </html>
